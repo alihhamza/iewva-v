@@ -1,6 +1,6 @@
 <template>
-  <div style="background: #ececec; padding: 30px;">
-    <a-card title="Login" :bordered="false" style="width: 300px">
+  <div style="background: #ececec; padding: 30px; min-height: 90vh; display: grid; place-items: center;">
+    <a-card title="Login" :bordered="false" style="width: 300px; margin: auto;">
       <a-form
           layout="horizontal"
           :model="formState"
@@ -24,6 +24,7 @@
         <a-form-item>
           <a-button
               type="primary"
+              style="width: 100%;"
               html-type="submit"
               :disabled="formState.user === '' || formState.password === ''"
               :loading="formState.loading"
